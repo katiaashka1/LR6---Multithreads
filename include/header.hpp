@@ -75,8 +75,7 @@ public:
     }
 
     static void init_logging() {
-        logging::register_simple_formatter_factory<logging::trivial::severity_level, char > ("Severity");
-
+        
         logging::add_file_log (
                         keywords::file_name = "info.log",
                         keywords::format = "[%TimeStamp%] [%ThreadID%] [%Severity%] %Message%"
