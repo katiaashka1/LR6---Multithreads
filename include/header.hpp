@@ -91,7 +91,7 @@ public:
 };
 
 int main() {
-    hashMaster test=4;    
+    hashMaster test(4);
 }
 
 #endif // INCLUDE_HEADER_HPP_
