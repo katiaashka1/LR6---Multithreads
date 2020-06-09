@@ -43,11 +43,11 @@ public:
 
 
     void setThreads() {
-        for (uint64_t i = 0; i < threadNumber; i++) {
+        for (uint64_t i = 0; i < threadNumber; ++i) {
             std::thread th(hashHandler, i, this);
             allThreads.push_back(std::move(th));
         }
-        for (uint64_t i = 0; i < threadNumber; i++) {
+        for (uint64_t i = 0; i < threadNumber; ++i) {
             allThreads.at(i).join();
         }
     }
