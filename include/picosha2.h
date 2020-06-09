@@ -375,3 +375,4 @@ template<typename OutIter>void hash256(std::ifstream& f, OutIter first, OutIter 
 }
 }// namespace picosha2
 #endif  // PICOSHA2_H
+
