@@ -24,6 +24,8 @@ using std::cout;
 using std::endl;
 using std::vector;
 
+int stringLenth = 30;
+string stringForHash;
 
 class hashMaster {
 public:
@@ -57,9 +59,7 @@ public:
     static void hashHandler(int a, hashMaster *obj) {
         obj->init_logging();
         while (true){
-            int stringLenth = 30;
             std::thread::id threadID=obj->allThreads.at(a).get_id();
-            string stringForHash;
             for (int i = 0; i < stringLenth; ++i) {
                 stringForHash.push_back(std::rand()%255);
             }
@@ -90,8 +90,8 @@ public:
     }
 };
 
-int main() {
-    hashMaster test(4);
-}
+//int main() {
+//    hashMaster test(4);
+//}
 
 #endif // INCLUDE_HEADER_HPP_
